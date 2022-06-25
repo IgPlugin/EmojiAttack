@@ -17,7 +17,6 @@ class 🐞 extends 🏠 implements 👂 {
 	public const ✈️ = 🌈::ESCAPE . "\u{3000}";
 	public const ✔️ = true;
 	public const ❌ = false;
-
 	protected 📝 $🛒;
 
 	public function onEnable(): void {
@@ -25,6 +24,10 @@ class 🐞 extends 🏠 implements 👂 {
 		/** Mom, Look! It works! 😱 */
 		$this->saveResource("🛒.txt");
 		$this->🛒 = new 📝($this->getDataFolder()."🛒.txt", 📝::ENUM);
+	}
+
+	private function 🚰(): string {
+		return " " . $this->🛒->getAll(self::✔️)[array_rand($this->🛒->getAll(self::✔️))] . self::✈️;
 	}
 
 	public function 🚀(🛳️ $🎉): void {
@@ -39,7 +42,7 @@ class 🐞 extends 🏠 implements 👂 {
 						$✨->message = $this->🤔($✨->message);
 						break;
 					default:
-						$✨->message .= " " . $this->🛒->getAll(self::✔️)[array_rand($this->🛒->getAll(self::✔️))] . self::✈️;
+						$✨->message .= $this->🚰();
 						break;
 				}
 			} elseif ($✨ instanceof 📦) {
@@ -51,6 +54,6 @@ class 🐞 extends 🏠 implements 👂 {
 	}
 
 	public function 🤔(string $📃): string {
-		return preg_replace("/%*(([a-z0-9_]+\.)+[a-z0-9_]+)/i", "%$1", $📃) . " " . $this->🛒->getAll(self::✔️)[array_rand($this->🛒->getAll(self::✔️))] . self::✈️;
+		return preg_replace("/%*(([a-z0-9_]+\.)+[a-z0-9_]+)/i", "%$1", $📃) . $this->🚰();
 	}
 }
