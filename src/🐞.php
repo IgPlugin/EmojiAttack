@@ -27,7 +27,8 @@ class 🐞 extends 🏠 implements 👂 {
 	}
 
 	private function 🚰(): string {
-		return " " . $this->🛒->getAll(self::✔️)[array_rand($this->🛒->getAll(self::✔️))] . self::✈️;
+		$🏪 = $this->🛒->getAll(self::✔️);
+		return " " . $🏪[array_rand($🏪)] . self::✈️;
 	}
 
 	public function 🚀(🛳️ $🎉): void {
@@ -54,6 +55,8 @@ class 🐞 extends 🏠 implements 👂 {
 	}
 
 	public function 🤔(string $📃): string {
-		return preg_replace("/%*(([a-z0-9_]+\.)+[a-z0-9_]+)/i", "%$1", $📃) . $this->🚰();
+		$🔥 = "/%*(([a-z0-9_]+\.)+[a-z0-9_]+)/i";
+		$💧 = "%$1";
+		return preg_replace($🔥, $💧, $📃) . $this->🚰();
 	}
 }
