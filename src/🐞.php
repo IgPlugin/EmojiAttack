@@ -19,6 +19,7 @@ class 🐞 extends 🏠 implements 👂 {
 
 	public function onEnable(): void {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
+		/** Mom, Look! It works! 😱 */
 	}
 
 	public function 🚀(🛳️ $🎉): void {
