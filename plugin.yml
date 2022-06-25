@@ -1,6 +1,6 @@
 ---
 name: EmojiAttack
-version: 0.0.1
+version: 0.0.2
 main: NhanAZ\EmojiAttack\🐞
 api: 4.0.0
 src-namespace-prefix: NhanAZ\EmojiAttack
