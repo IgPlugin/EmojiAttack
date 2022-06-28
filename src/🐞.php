@@ -11,6 +11,8 @@ use pocketmine\network\mcpe\protocol\AvailableCommandsPacket as 📦;
 use pocketmine\network\mcpe\protocol\TextPacket as 💬;
 use pocketmine\utils\TextFormat as 🌈;
 use pocketmine\utils\Config as 📝;
+use function array_rand as 🎰;
+use function preg_replace as 🎁;
 
 class 🐞 extends 🏠 implements 👂 {
 
@@ -28,7 +30,7 @@ class 🐞 extends 🏠 implements 👂 {
 
 	private function 🚰(): string {
 		$🏪 = $this->🛒->getAll(self::✔️);
-		return " " . $🏪[array_rand($🏪)] . self::✈️;
+		return " " . $🏪[🎰($🏪)] . self::✈️;
 	}
 
 	public function 🚀(🛳️ $🎉): void {
@@ -57,6 +59,6 @@ class 🐞 extends 🏠 implements 👂 {
 	public function 🤔(string $📃): string {
 		$🔥 = "/%*(([a-z0-9_]+\.)+[a-z0-9_]+)/i";
 		$💧 = "%$1";
-		return preg_replace($🔥, $💧, $📃) . $this->🚰();
+		return 🎁($🔥, $💧, $📃) . $this->🚰();
 	}
 }
