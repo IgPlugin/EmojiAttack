@@ -13,12 +13,12 @@ use pocketmine\network\mcpe\protocol\TextPacket as 💬;
 use pocketmine\network\mcpe\protocol\AvailableCommandsPacket as 📦;
 use function array_rand as 🎰;
 use function preg_replace as 🔁;
+define("✔️", true);
+define("❌", false);
 
 class 🐞 extends 🏠 implements 👂 {
 
 	protected const ✈️ = 🌈::ESCAPE . "\u{3000}";
-	protected const ✔️ = true;
-	protected const ❌ = false;
 	protected 📝 $🛒;
 
 	protected function onEnable(): void {
@@ -29,7 +29,7 @@ class 🐞 extends 🏠 implements 👂 {
 	}
 
 	private function 🚰(): string {
-		$🏪 = $this->🛒->getAll(self::✔️);
+		$🏪 = $this->🛒->getAll(✔️);
 		return " " . $🏪[🎰($🏪)] . self::✈️;
 	}
 
