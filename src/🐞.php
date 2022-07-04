@@ -13,6 +13,7 @@ use pocketmine\network\mcpe\protocol\TextPacket as 💬;
 use pocketmine\network\mcpe\protocol\AvailableCommandsPacket as 📦;
 use function array_rand as 🎰;
 use function preg_replace as 🔁;
+
 define("✔️", true);
 define("❌", false);
 
@@ -24,6 +25,7 @@ class 🐞 extends 🏠 implements 👂 {
 	protected function onEnable(): void {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		/** Mom, Look! It works! 😱 */
+		$this->saveDefaultConfig();
 		$this->saveResource("🛒.txt");
 		$this->🛒 = new 📝($this->getDataFolder() . "🛒.txt", 📝::ENUM);
 	}
@@ -36,7 +38,12 @@ class 🐞 extends 🏠 implements 👂 {
 	public function 🤔(string $📃): string {
 		$🔥 = "/%*(([a-z0-9_]+\.)+[a-z0-9_]+)/i";
 		$💧 = "%$1";
-		return 🔁($🔥, $💧, $📃) . $this->🚰();
+		if ($this->getConfig()->get("randomColor")) {
+			$🏳️‍🌈 = $this->getConfig()->get("arrColor", ["§e", "§a", "§d", "§c", "§b"]);
+			return 🔁($🔥, $💧, $📃) .  $🏳️‍🌈[🎰($🏳️‍🌈)] . $this->🚰();
+		} else {
+			return 🔁($🔥, $💧, $📃) . $this->🚰();
+		}
 	}
 
 	public function 🚀(🛳️ $🎉): void {
@@ -51,7 +58,12 @@ class 🐞 extends 🏠 implements 👂 {
 						$✨->message = $this->🤔($✨->message);
 						break;
 					default:
-						$✨->message .= $this->🚰();
+						if ($this->getConfig()->get("randomColor")) {
+							$🏳️‍🌈 = $this->getConfig()->get("arrColor", ["§e", "§a", "§d", "§c", "§b"]);
+							$✨->message .= $🏳️‍🌈[🎰($🏳️‍🌈)] . $this->🚰();
+						} else {
+							$✨->message .= $this->🚰();
+						}
 						break;
 				}
 			} elseif ($✨ instanceof 📦) {

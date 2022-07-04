@@ -1,0 +1,7 @@
+---
+# The emoticons in 🛒.txt will be more colorful
+randomColor: false
+
+# Random array of colors
+arrColor: ["§e", "§a", "§d", "§c", "§b"]
+...
