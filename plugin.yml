@@ -2,7 +2,7 @@
 name: EmojiAttack
 version: 0.0.2
 main: NhanAZ\EmojiAttack\🐞
-api: 4.0.0
+api: 5.0.0
 website: https://github.com/NhanAZ
 author: NhanAZ
 description: An emoji attack makes your server more vibrant. The suffixes of texts sent to players will be random emojis!
